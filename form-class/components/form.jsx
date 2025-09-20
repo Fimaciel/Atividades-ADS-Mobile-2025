@@ -9,7 +9,6 @@ export default function Formulario() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
 
-  // valida nome
   const validateForm = () => {
     let isValid = true;
 
@@ -30,7 +29,6 @@ export default function Formulario() {
     return isValid;
   };
 
-  // valida email com regex simples
   const validateEmail = (email) => {
     const regex = /\S+@\S+\.\S+/;
     return regex.test(email);
@@ -43,7 +41,6 @@ export default function Formulario() {
 
       Alert.alert("Sucesso!!!", "Formulário enviado com sucesso");
 
-      // resetar formulário
       setNome("");
       setEmail("");
     } else {
